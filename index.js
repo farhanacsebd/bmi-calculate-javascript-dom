@@ -1,3 +1,5 @@
+const message = document.getElementById('message');
+
 function bmi(){
     
     const height = document.getElementById('height').value;
@@ -7,5 +9,4 @@ function bmi(){
     const bmi = weight/(height/100 * height/100);
     const total = bmi.toFixed(2);
     result.innerText ="Your BMI is " + total;
-    
 }
