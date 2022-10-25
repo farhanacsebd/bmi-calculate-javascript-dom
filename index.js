@@ -6,12 +6,21 @@ function bmi(){
     const weight = document.getElementById('weight').value;
     let result = document.getElementById('result');
 
-    const bmi = weight/(height/100 * height/100);
-    const total = bmi.toFixed(2);
-    result.innerText ="Your BMI is " + total;
+    if(Number(height) && Number(weight)){
+     const bmi = weight/(height/100 * height/100);
+     const total = bmi.toFixed(2);
+     result.innerText ="Your BMI is " + total;
     
-    let report = showMessage(bmi);
-    message.textContent = report;
+     let report = showMessage(bmi);
+     message.innerText = report;
+    }   
+
+    else{
+        alert('please enter a valid input number');
+        reset()
+    }
+
+   
 }
 
 
@@ -32,4 +41,11 @@ function showMessage(result){
     else if(result > 25){
         return "You are overweight"
     }
+}
+
+function reset(){
+    height.value = "";
+    weight.value = "";
+    result.innerText = "";
+    message.innerText = "";
 }
