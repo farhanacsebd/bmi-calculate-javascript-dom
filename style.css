@@ -54,6 +54,7 @@ h2{
 
 #btn{
     font-size: inherit;
+    font-weight: bold;
     margin-top: 10px;
     border: none;
     color: #fff;
@@ -72,4 +73,12 @@ h2{
 #info{
     color: #fff;
     font-size: 15px;
+}
+
+.btn-reset{
+   background-color: transparent;
+   border: none;
+   color: rgb(34, 250, 34);
+   font-size: 30px;
+   font-weight: 700;
 }
